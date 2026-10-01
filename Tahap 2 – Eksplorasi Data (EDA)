@@ -1,0 +1,15 @@
+# Informasi struktur dataset
+df.info()
+# Melihat jumlah baris dan kolom
+print("Jumlah baris :", df.shape[0])
+print("Jumlah kolom :", df.shape[1])
+
+# Melihat nama kolom
+print("\nNama kolom:")
+print(df.columns.tolist())
+# Jumlah nilai kosong setiap kolom
+missing_values = df.isnull().sum()
+
+print("Jumlah missing value setiap kolom:")
+print(missing_values)
+df.describe(include='all')
